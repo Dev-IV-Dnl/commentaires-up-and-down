@@ -2,7 +2,8 @@ let card1 = document.querySelector(".card1");
 let card2 = document.querySelector(".card2");
 let card3 = document.querySelector(".card3");
 let allCards = [card1, card2, card3];
-let btn = document.querySelector(".btn");
+let btnNext = document.querySelector(".btnNext");
+let btnPrev = document.querySelector("btnPrev")
 tabNum = [1, 2, 3];
 
 // for(let i in allCards) {
@@ -34,7 +35,7 @@ tabNum = [1, 2, 3];
 //     }
 // })
 
-btn.addEventListener("click", () => {
+btnNext.addEventListener("click", () => {
     if (card1.style.transform == "") {
         console.log("Je transforme une première fois");
         card1.style.transform = "translate(0px, -350px)";

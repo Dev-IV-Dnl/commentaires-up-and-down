@@ -38,7 +38,27 @@ h1 {
     overflow: hidden;
 }
 
-.btn {
+.btnPrev {
+    position: absolute;
+    top: 230px;
+    right: 175px;
+    font-family: fantasy;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px;
+    width: 70px;
+    height: 20px;
+    background-color: var(--col3);
+    color: var(--col2);
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+.btnPrev:hover {
+    background-color: var(--col2);
+    color: var(--col3);
+    box-shadow: 1px 1px 3px var(--col1);
+}
+.btnNext {
     position: absolute;
     top: 230px;
     right: 100px;
@@ -53,7 +73,7 @@ h1 {
     cursor: pointer;
     transition: linear 0.2s;
 }
-.btn:hover {
+.btnNext:hover {
     background-color: var(--col2);
     color: var(--col3);
     box-shadow: 1px 1px 3px var(--col1);
