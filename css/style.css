@@ -39,7 +39,7 @@ h1 {
 
 .btn {
     position: absolute;
-    top: 100px;
+    top: 230px;
     font-family: fantasy;
     border-radius: 10px;
     border: none;
@@ -47,7 +47,14 @@ h1 {
     width: 70px;
     height: 20px;
     background-color: var(--col3);
+    color: var(--col2);
     cursor: pointer;
+    transition: linear 0.2s;
+}
+.btn:hover {
+    background-color: var(--col2);
+    color: var(--col3);
+    box-shadow: 1px 1px 3px var(--col1);
 }
 
 .card1, .card2, .card3 {
@@ -58,7 +65,8 @@ h1 {
     transition: linear 0.2s;
     border-radius: 10px;
     box-shadow: 2px 2px 5px;
-    cursor: pointer;
+    user-select: none;
+    /* cursor: pointer; */
 }
 
 .card1 {
