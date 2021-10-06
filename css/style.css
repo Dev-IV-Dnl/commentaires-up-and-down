@@ -5,6 +5,8 @@
     --col4: grey;
     --col5: lightgrey;
     --col6: darkseagreen;
+    --col7: rgb(255, 151, 151);
+    --col8: rgb(0, 195, 255);
 }
 
 * {
@@ -25,31 +27,80 @@ h1 {
 }
 
 .containerCard {
-    width: 500px;
-    height: 230px;
-    padding: 10px;
-    background-color: var(--col6);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 350px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px;
 }
 
-.card {
-    width: 100%;
-    height: 100%;
+.btn {
+    position: absolute;
+    top: 100px;
+    font-family: fantasy;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px;
+    width: 70px;
+    height: 20px;
+    background-color: var(--col3);
+    cursor: pointer;
+}
+
+.card1, .card2, .card3 {
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 85%;
+    transition: linear 0.2s;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px;
+    cursor: pointer;
+}
+
+.card1 {
+    display: flex;
+    background-color: var(--col6);
+}
+
+.card2 {
+    display: none;
+    background-color: var(--col7);
+}
+
+.card3 {
+    display: none;
+    background-color: var(--col8);
 }
 
 .photoEtIdentite {
     display: flex;
     align-items: center;
+    margin-left: 20px;
+}
+.description {
+    margin-left: 20px;
 }
 
-.photo {
+.photo1, .photo2, .photo3 {
     width: 70px;
     height: 70px;
-    background-image: url("../img/photo1.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 50px;
+}
+
+.photo1 {
+    background-image: url("../img/photo1.jpg");
+}
+.photo2 {
+    background-image: url("../img/photo2.jpg");
+}
+.photo3 {
+    background-image: url("../img/photo3.jpg");
 }
 
 .identite {
