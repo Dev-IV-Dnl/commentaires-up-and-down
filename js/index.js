@@ -3,8 +3,35 @@ let card2 = document.querySelector(".card2");
 let card3 = document.querySelector(".card3");
 let allCards = [card1, card2, card3];
 let btnNext = document.querySelector(".btnNext");
-let btnPrev = document.querySelector("btnPrev")
+let btnPrev = document.querySelector(".btnPrev")
 tabNum = [1, 2, 3];
+
+btnNext.addEventListener("click", () => {
+    if (card1.style.transform == "" || card1.style.transform == "translate(0px, 0px)") {
+        console.log("Je transforme une première fois");
+        card1.style.transform = "translate(0px, -350px)";
+        card2.style.transform = "translate(0px, -350px)";
+        card3.style.transform = "translate(0px, -350px)";
+    } else if (card1.style.transform == "translate(0px, -350px)") {
+        console.log("Je transforme une deuxième fois");
+        card1.style.transform = "translate(0px, -700px)";
+        card2.style.transform = "translate(0px, -700px)";
+        card3.style.transform = "translate(0px, -700px)";
+    }
+})
+
+btnPrev.addEventListener("click", () => {
+    if (card1.style.transform == "translate(0px, -350px)") {
+        console.log("Je transforme une première fois");
+        card1.style.transform = "translate(0px, 0px)";
+        card2.style.transform = "translate(0px, 0px)";
+        card3.style.transform = "translate(0px, 0px)";
+    } else if (card1.style.transform == "translate(0px, -700px)") {
+        card1.style.transform = "translate(0px, -350px)";
+        card2.style.transform = "translate(0px, -350px)";
+        card3.style.transform = "translate(0px, -350px)";
+    }
+})
 
 // for(let i in allCards) {
 //     allCards[i].addEventListener("click", () => {
@@ -21,6 +48,7 @@ tabNum = [1, 2, 3];
 //     })
 // }
 
+
 // btn.addEventListener("click", () => {
 //     console.log("Je clique sur mon btn");
 //     if(card1.style.display == "flex") {
@@ -34,17 +62,3 @@ tabNum = [1, 2, 3];
 //         card1.style.display = "flex";
 //     }
 // })
-
-btnNext.addEventListener("click", () => {
-    if (card1.style.transform == "") {
-        console.log("Je transforme une première fois");
-        card1.style.transform = "translate(0px, -350px)";
-        card2.style.transform = "translate(0px, -350px)";
-        card3.style.transform = "translate(0px, -350px)";
-    } else if (card1.style.transform == "translate(0px, -350px)") {
-        console.log("Je retransforme une deuxième fois");
-        card1.style.transform = "translate(0px, -700px)";
-        card2.style.transform = "translate(0px, -700px)";
-        card3.style.transform = "translate(0px, -700px)";
-    }
-})
