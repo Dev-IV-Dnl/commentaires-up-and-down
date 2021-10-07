@@ -24,7 +24,7 @@ btnNext.addEventListener("click", () => {
                 identite[i].style.color = "black";
                 description[i].style.color = "black";
             }
-        } else if (cards[i].style.transform == "translate(0px, -350px)") {
+        } else {
             console.log("Je transforme une 2ème fois");
             cards[i].style.transform = "translate(0px, -700px)";
             cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
