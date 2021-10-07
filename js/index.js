@@ -1,49 +1,52 @@
-let card1 = document.querySelector(".card1");
-let card2 = document.querySelector(".card2");
-let card3 = document.querySelector(".card3");
-let allCards = [card1, card2, card3];
+// let card1 = document.querySelector(".card1");
+// let card2 = document.querySelector(".card2");
+// let card3 = document.querySelector(".card3");
+let cards = document.querySelectorAll(".card");
+console.log(cards.length);
+// let allcards = [card1, card2, card3];
 let btnNext = document.querySelector(".btnNext");
-let btnPrev = document.querySelector(".btnPrev")
-tabNum = [1, 2, 3];
+let btnPrev = document.querySelector(".btnPrev");
+tabColors = ["darkseagreen", "lightpink", "rgb(0, 195, 255)", "rgb(255, 151, 151)", "lightblue", "lightseagreen", "lightgreen"];
 
 btnNext.addEventListener("click", () => {
-    if (card1.style.transform == "" || card1.style.transform == "translate(0px, 0px)") {
-        console.log("Je transforme une première fois");
-        card1.style.transform = "translate(0px, -350px)";
-        card2.style.transform = "translate(0px, -350px)";
-        card3.style.transform = "translate(0px, -350px)";
-    } else if (card1.style.transform == "translate(0px, -350px)") {
-        console.log("Je transforme une deuxième fois");
-        card1.style.transform = "translate(0px, -700px)";
-        card2.style.transform = "translate(0px, -700px)";
-        card3.style.transform = "translate(0px, -700px)";
+    for(i = 0; i < cards.length; i++) {
+        if (cards[i].style.transform == "" || cards[i].style.transform == "translate(0px, 0px)") {
+            console.log("Je transforme une 1ère fois");
+            cards[i].style.transform = "translate(0px, -350px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+        } else if (cards[i].style.transform == "translate(0px, -350px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -700px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+        }
     }
 })
 
 btnPrev.addEventListener("click", () => {
-    if (card1.style.transform == "translate(0px, -350px)") {
-        console.log("Je transforme une première fois");
-        card1.style.transform = "translate(0px, 0px)";
-        card2.style.transform = "translate(0px, 0px)";
-        card3.style.transform = "translate(0px, 0px)";
-    } else if (card1.style.transform == "translate(0px, -700px)") {
-        card1.style.transform = "translate(0px, -350px)";
-        card2.style.transform = "translate(0px, -350px)";
-        card3.style.transform = "translate(0px, -350px)";
+    for (i = 0; i < cards.length; i++) {
+        if (cards[i].style.transform == "translate(0px, -350px)") {
+            console.log("Je transforme une 1ère fois");
+            cards[i].style.transform = "translate(0px, 0px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+        } else if (cards[i].style.transform == "translate(0px, -700px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -350px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+        }
     }
 })
 
-// for(let i in allCards) {
-//     allCards[i].addEventListener("click", () => {
-//         if(allCards[i]==card1) {
-//             card1.style.display = "none";
-//             card2.style.display = "flex";
-//         } else if(allCards[i] == card2) {
-//             card2.style.display = "none";
-//             card3.style.display = "flex";
-//         } else if(allCards[i] == card3) {
-//             card3.style.display = "none";
-//             card1.style.display = "flex";
+// for(let i in allcardss) {
+//     allcardss[i].addEventListener("click", () => {
+//         if(allcardss[i]==cards1) {
+//             cards1.style.display = "none";
+//             cards2.style.display = "flex";
+//         } else if(allcardss[i] == cards2) {
+//             cards2.style.display = "none";
+//             cards3.style.display = "flex";
+//         } else if(allcardss[i] == cards3) {
+//             cards3.style.display = "none";
+//             cards1.style.display = "flex";
 //         }
 //     })
 // }
@@ -51,14 +54,14 @@ btnPrev.addEventListener("click", () => {
 
 // btn.addEventListener("click", () => {
 //     console.log("Je clique sur mon btn");
-//     if(card1.style.display == "flex") {
-//             card1.style.display = "none";
-//             card2.style.display = "flex";
-//     } else if (card2.style.display == "flex") {
-//         card2.style.display = "none";
-//         card3.style.display = "flex";
-//     } else if (card3.style.display == "flex") {
-//         card3.style.display = "none";
-//         card1.style.display = "flex";
+//     if(cards1.style.display == "flex") {
+//             cards1.style.display = "none";
+//             cards2.style.display = "flex";
+//     } else if (cards2.style.display == "flex") {
+//         cards2.style.display = "none";
+//         cards3.style.display = "flex";
+//     } else if (cards3.style.display == "flex") {
+//         cards3.style.display = "none";
+//         cards1.style.display = "flex";
 //     }
 // })
