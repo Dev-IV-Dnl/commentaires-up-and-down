@@ -8,7 +8,7 @@ let description = document.querySelectorAll(".description");
 
 btnNext.addEventListener("click", () => {
     for (i = 0; i < cards.length; i++) {
-        console.log((i+1)*350)
+        console.log((i + 1) * 350)
         if (cards[i].style.transform == "" || cards[i].style.transform == "translate(0px, 0px)") {
             console.log("Je transforme une 1ère fois");
             cards[i].style.transform = "translate(0px, -350px)";
@@ -20,9 +20,53 @@ btnNext.addEventListener("click", () => {
                 identite[i].style.color = "black";
                 description[i].style.color = "black";
             }
-        } else {
+        } else if (cards[i].style.transform == "translate(0px, -350px)") {
             console.log("Je transforme une 2ème fois");
             cards[i].style.transform = "translate(0px, -700px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
+        } else if (cards[i].style.transform == "translate(0px, -700px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -1050px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
+        } else if (cards[i].style.transform == "translate(0px, -1050px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -1400px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
+        } else if (cards[i].style.transform == "translate(0px, -1400px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -1750px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
+        } else if (cards[i].style.transform == "translate(0px, -1750px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -2100px)";
             cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
             if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
                 identite[i].style.color = "#F1F1F1";
@@ -51,6 +95,50 @@ btnPrev.addEventListener("click", () => {
         } else if (cards[i].style.transform == "translate(0px, -700px)") {
             console.log("Je transforme une 2ème fois");
             cards[i].style.transform = "translate(0px, -350px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
+        } else if (cards[i].style.transform == "translate(0px, -1050px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -700px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
+        } else if (cards[i].style.transform == "translate(0px, -1400px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -1050px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
+        } else if (cards[i].style.transform == "translate(0px, -1750px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -1400px)";
+            cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
+        } else if (cards[i].style.transform == "translate(0px, -2100px)") {
+            console.log("Je transforme une 2ème fois");
+            cards[i].style.transform = "translate(0px, -1750px)";
             cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
             if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
                 identite[i].style.color = "#F1F1F1";
