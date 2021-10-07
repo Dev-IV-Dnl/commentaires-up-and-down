@@ -1,6 +1,4 @@
-
 let cards = document.querySelectorAll(".card");
-console.log(cards.length);
 let btnNext = document.querySelector(".btnNext");
 let btnPrev = document.querySelector(".btnPrev");
 tabColors = ["darkseagreen", "purple", "rgb(0, 195, 255)", "rgb(255, 151, 151)", "lightblue", "lightseagreen", "lightgreen", "black", "darkgreen", "darkblue", "darkred"];
@@ -10,6 +8,7 @@ let description = document.querySelectorAll(".description");
 
 btnNext.addEventListener("click", () => {
     for (i = 0; i < cards.length; i++) {
+        console.log((i+1)*350)
         if (cards[i].style.transform == "" || cards[i].style.transform == "translate(0px, 0px)") {
             console.log("Je transforme une 1ère fois");
             cards[i].style.transform = "translate(0px, -350px)";
