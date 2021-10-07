@@ -6,7 +6,10 @@ console.log(cards.length);
 // let allcards = [card1, card2, card3];
 let btnNext = document.querySelector(".btnNext");
 let btnPrev = document.querySelector(".btnPrev");
-tabColors = ["darkseagreen", "lightpink", "rgb(0, 195, 255)", "rgb(255, 151, 151)", "lightblue", "lightseagreen", "lightgreen"];
+tabColors = ["darkseagreen", "purple", "rgb(0, 195, 255)", "rgb(255, 151, 151)", "lightblue", "lightseagreen", "lightgreen", "black", "darkgreen", "darkblue", "darkred"];
+let identite = document.querySelectorAll(".identite");
+let description = document.querySelectorAll(".description");
+
 
 btnNext.addEventListener("click", () => {
     for(i = 0; i < cards.length; i++) {
@@ -14,10 +17,24 @@ btnNext.addEventListener("click", () => {
             console.log("Je transforme une 1ère fois");
             cards[i].style.transform = "translate(0px, -350px)";
             cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
         } else if (cards[i].style.transform == "translate(0px, -350px)") {
             console.log("Je transforme une 2ème fois");
             cards[i].style.transform = "translate(0px, -700px)";
             cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
         }
     }
 })
@@ -28,10 +45,24 @@ btnPrev.addEventListener("click", () => {
             console.log("Je transforme une 1ère fois");
             cards[i].style.transform = "translate(0px, 0px)";
             cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
         } else if (cards[i].style.transform == "translate(0px, -700px)") {
             console.log("Je transforme une 2ème fois");
             cards[i].style.transform = "translate(0px, -350px)";
             cards[i].style.backgroundColor = tabColors[Math.floor(Math.random() * tabColors.length)];
+            if (cards[i].style.backgroundColor == "black" || cards[i].style.backgroundColor == "purple" || cards[i].style.backgroundColor == "darkgreen" || cards[i].style.backgroundColor == "darkblue" || cards[i].style.backgroundColor == "darkred") {
+                identite[i].style.color = "#F1F1F1";
+                description[i].style.color = "#F1F1F1";
+            } else {
+                identite[i].style.color = "black";
+                description[i].style.color = "black";
+            }
         }
     }
 })
