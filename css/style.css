@@ -28,9 +28,6 @@ h1 {
 
 .containerCard {
     position: relative;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     width: 700px;
     height: 350px;
     border-radius: 10px;
